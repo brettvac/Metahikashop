@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<changelogs>
+    <changelog>
+        <element>metahikashop</element>
+        <type>plugin</type>
+        <version>1.0</version>
+        <addition>
+            <item>Initial release of the Meta HikaShop plugin.</item>
+            <item>Integration of the Meta Pixel for browser-side event tracking.</item>
+            <item>Integration of Meta Conversions API for server-side Purchase event tracking.</item>
+            <item>Support for PageView, ViewContent, InitiateCheckout, and Purchase events.</item>
+            <item>Order status validation and duplicate Purchase event prevention.</item>
+            <item>Capture and storage of Meta browser identifiers (fbp and fbc) for server-side event matching.</item>
+            <item>Configurable event tracking, confirmed-order handling, and debug logging.</item>
+        </addition>
+    </changelog>
+</changelogs>

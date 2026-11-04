@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_METAHIKASHOP</name>
+	<author>Brett</author>
+	<creationDate>October 2026</creationDate>
+	<copyright>Copyright (C) 2026</copyright>
+	<license>GNU/GPL version 3</license>
+	<version>1.0</version>
+	<description>PLG_SYSTEM_METAHIKASHOP_XML_DESCRIPTION</description>
+	<namespace path="src">Naftee\Plugin\System\Metahikashop</namespace>
+	<scriptfile>script.php</scriptfile>
+	<files>
+		<filename>script.php</filename>
+		<folder plugin="metahikashop">services</folder>
+		<folder>src</folder>
+		<folder>language</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/plg_system_metahikashop.ini</language>
+		<language tag="en-GB">language/en-GB/plg_system_metahikashop.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="PLG_SYSTEM_METAHIKASHOP_BASIC">
+				<field name="dataset_id" type="text" label="PLG_SYSTEM_METAHIKASHOP_DATASET_ID" description="PLG_SYSTEM_METAHIKASHOP_DATASET_ID_DESC" size="40" required="true" />
+				<field name="access_token" type="text" label="PLG_SYSTEM_METAHIKASHOP_ACCESS_TOKEN" description="PLG_SYSTEM_METAHIKASHOP_ACCESS_TOKEN_DESC" size="80" required="true" />
+				<field name="test_event_code" type="text" label="PLG_SYSTEM_METAHIKASHOP_TEST_EVENT_CODE" description="PLG_SYSTEM_METAHIKASHOP_TEST_EVENT_CODE_DESC" size="30" hint="TEST12345" />
+				<field name="only_confirmed" type="radio" label="PLG_SYSTEM_METAHIKASHOP_ONLY_CONFIRMED" description="PLG_SYSTEM_METAHIKASHOP_ONLY_CONFIRMED_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="debug" type="radio" label="PLG_SYSTEM_METAHIKASHOP_DEBUG" description="PLG_SYSTEM_METAHIKASHOP_DEBUG_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="js_events" label="PLG_SYSTEM_METAHIKASHOP_JS_EVENTS">
+				<field name="js_pageview" type="radio" label="PLG_SYSTEM_METAHIKASHOP_JS_PAGEVIEW" description="PLG_SYSTEM_METAHIKASHOP_JS_PAGEVIEW_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="js_viewcontent" type="radio" label="PLG_SYSTEM_METAHIKASHOP_JS_VIEWCONTENT" description="PLG_SYSTEM_METAHIKASHOP_JS_VIEWCONTENT_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="js_initiatecheckout" type="radio" label="PLG_SYSTEM_METAHIKASHOP_JS_INITIATECHECKOUT" description="PLG_SYSTEM_METAHIKASHOP_JS_INITIATECHECKOUT_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="js_purchase" type="radio" label="PLG_SYSTEM_METAHIKASHOP_JS_PURCHASE" description="PLG_SYSTEM_METAHIKASHOP_JS_PURCHASE_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="capi_events" label="PLG_SYSTEM_METAHIKASHOP_CAPI_EVENTS">
+				<field name="capi_purchase" type="radio" label="PLG_SYSTEM_METAHIKASHOP_CAPI_PURCHASE" description="PLG_SYSTEM_METAHIKASHOP_CAPI_PURCHASE_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+  <changelogurl>https://raw.githubusercontent.com/brettvac/metahikashop/refs/heads/main/update/changelog.xml</changelogurl>
+	<updateservers>
+		<server type="extension" name="Meta HikaShop Updates">https://raw.githubusercontent.com/brettvac/metahikashop/refs/heads/main/update/updates.xml</server>
+	</updateservers>
+</extension>
