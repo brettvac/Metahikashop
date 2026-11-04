@@ -12,7 +12,7 @@ Send HikaShop purchase events to Meta via the Conversions API and optionally tra
 
 ## Requirements
 
-- Joomla 4.x or 5.x
+- Joomla 5.x and up
 - HikaShop
 - PHP 8.1+ recommended
 - Meta Dataset ID + System User access token
