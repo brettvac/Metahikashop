@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  plg_system_metahikashop
- * @version     1.0
+ * @version     1.1
  * @license     GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 

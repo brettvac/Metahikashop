@@ -3,6 +3,44 @@
     <changelog>
         <element>metahikashop</element>
         <type>plugin</type>
+        <version>1.1</version>
+        <change>
+            <item>Optimized Meta Pixel initialization to avoid loading the base code on frontend pages when PageView and ViewContent tracking are disabled.</item>
+            <item>Restricted Pixel initialization to relevant HikaShop checkout and order confirmation pages when global PageView and ViewContent tracking are disabled.</item>
+            <item>Improved fbp and fbc cookie capture to support pages where HikaShop JavaScript is unavailable.</item>
+            <item>Added a dedicated Meta CAPI helper to handle server-side PageView, ViewContent, InitiateCheckout, and Purchase events.</item>
+            <item>Refactored browser and order user-data collection for reuse across server-side events.</item>
+            <item>Added matching event IDs to support browser and server event deduplication.</item>
+            <item>Added InitiateCheckout event deduplication to prevent repeated server-side events during checkout.</item>
+            <item>Moved Purchase event payload construction and delivery into the dedicated Meta CAPI helper.</item>
+            <item>Clarified the confirmed-order handling configuration description, including invoice status validation and Purchase event deduplication.</item>
+            <item>Updated PixelEventsHelper to include matching event IDs in PageView, ViewContent, and InitiateCheckout browser events.</item>
+            <item>Integrated the Meta CAPI helper with the plugin's existing configuration parameters.</item>
+            <item>Updated Purchase event handling to use buildOrderUserData() for order-specific customer information.</item>
+            <item>Added configuration options for enabling or disabling individual server-side events.</item>
+            <item>Updated the Meta Graph API version to v27.0 and defined it as a class constant in MetaCapiHelper.</item>
+        </change>
+        <fixes>
+            <item>Fixed unnecessary Meta Pixel base code injection on all frontend pages when PageView and ViewContent tracking were disabled.</item>
+            <item>Fixed cookie capture dependency on HikaShop JavaScript readiness.</item>
+            <item>Improved server-side event deduplication using shared event IDs for browser and Conversions API tracking.</item>
+            <item>Prevented repeated InitiateCheckout server-side events for the same cart during checkout.</item>
+            <item>Fixed potential event ID mismatches between browser Pixel and Conversions API events.</item>
+            <item>Improved consistency of customer data used for server-side Purchase events.</item>
+            <item>Ensured checkout event IDs are available for browser Pixel tracking even when server-side InitiateCheckout tracking is disabled.</item>
+        </fixes>
+        <language>
+            <item>Updated English language strings for plugin configuration and event tracking settings.</item>
+            <item>Added English language strings and descriptions for the PageView, ViewContent, InitiateCheckout, and Purchase Conversions API settings.</item>
+            <item>Updated the plugin name and description to reflect its Meta Pixel and Conversions API integration with HikaShop.</item>
+            <item>Added French language strings for plugin configuration and event tracking settings.</item>
+            <item>Added French language strings and descriptions for the PageView, ViewContent, InitiateCheckout, and Purchase Conversions API settings.</item>
+            <item>Updated the French plugin name and description to reflect its Meta Pixel and Conversions API integration with HikaShop.</item>
+        </language>
+    </changelog>
+    <changelog>
+        <element>metahikashop</element>
+        <type>plugin</type>
         <version>1.0</version>
         <addition>
             <item>Initial release of the Meta HikaShop plugin.</item>
